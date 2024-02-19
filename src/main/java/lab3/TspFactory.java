@@ -5,11 +5,12 @@ import org.uncommons.watchmaker.framework.factories.AbstractCandidateFactory;
 import java.util.Random;
 
 public class TspFactory extends AbstractCandidateFactory<TspSolution> {
-
+    public int dim;
+    public TspFactory(int dim) {
+        this.dim = dim;
+    }
     public TspSolution generateRandomCandidate(Random random) {
-        TspSolution solution = new TspSolution();
-        //your implementation
-        return solution;
+        return new TspSolution(dim, random);
     }
 }
 
