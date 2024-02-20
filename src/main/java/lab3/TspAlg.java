@@ -22,11 +22,11 @@ public class TspAlg {
         Random random = new Random(); // random
 
         CandidateFactory<TspSolution> factory = new TspFactory(tspProblem.getDim()); // generation of solutions
-//
-//        ArrayList<EvolutionaryOperator<TspSolution>> operators = new ArrayList<EvolutionaryOperator<TspSolution>>();
-//        operators.add(new TspCrossover()); // Crossover
-//        operators.add(new TspMutation()); // Mutation
-//        EvolutionPipeline<TspSolution> pipeline = new EvolutionPipeline<TspSolution>(operators);
+
+        ArrayList<EvolutionaryOperator<TspSolution>> operators = new ArrayList<EvolutionaryOperator<TspSolution>>();
+        operators.add(new TspCrossover()); // Crossover
+        operators.add(new TspMutation()); // Mutation
+        EvolutionPipeline<TspSolution> pipeline = new EvolutionPipeline<TspSolution>(operators);
 //
 //        SelectionStrategy<Object> selection = new RouletteWheelSelection(); // Selection operator
 //

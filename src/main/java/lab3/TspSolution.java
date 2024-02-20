@@ -12,4 +12,10 @@ public class TspSolution {
         route = IntStream.range(0, dim).boxed().collect(Collectors.toList());
         Collections.shuffle(route);
     }
+    public TspSolution(List<Integer> route) {
+        this.route = route;
+    }
+    public int getDim() {
+        return route.size();
+    }
 }
