@@ -7,10 +7,10 @@ import java.util.Scanner;
 import java.io.File;
 
 public class TspProblem {
-    public ArrayList<int[]> nodes;
+    public ArrayList<double[]> nodes;
 
     public TspProblem(String path) {
-        this.nodes = new ArrayList<int[]>();
+        this.nodes = new ArrayList<double[]>();
         try {
             Scanner scanner = new Scanner(new File(path));
             while (scanner.hasNextLine()) {
@@ -25,7 +25,7 @@ public class TspProblem {
                     break;
                 }
                 String[] splitted = line.trim().split(" ");
-                int[] coords = Arrays.stream(splitted).skip(1).mapToInt(Integer::parseInt).toArray();
+                double[] coords = Arrays.stream(splitted).skip(1).mapToDouble(Double::parseDouble).toArray();
                 nodes.add(coords);
             }
             scanner.close();
